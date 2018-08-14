@@ -9,4 +9,13 @@ module ApplicationHelper
     end
   end
 
+  # Converts devise alert types to bootstrap types
+  def convert_to_bootstrap_alert(type)
+    case type
+    when 'alert' then 'danger'
+    when 'notice' then 'success'
+    else type
+    end
+  end
+
 end

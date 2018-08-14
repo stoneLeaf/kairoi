@@ -15,8 +15,6 @@ Rails.application.routes.draw do
     get '/sign_up' => 'devise/registrations#new'
   end
 
-  #get '/dashboard' => 'dashboards#show'
-
   get '/features' => 'pages#features'
   get '/about' => 'pages#about'
   get '/tos' => 'pages#tos'
