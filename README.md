@@ -1,15 +1,14 @@
-# README
+# kairoi README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
 
 * Ruby version
 
 * System dependencies
 
 * Configuration
+
+- should set up ENV["SECRET_KEY_BASE"], used by Devise as config.secret_key in prod
+  heroku config:set SECRET_KEY_BASE=*****
 
 * Database creation
 
