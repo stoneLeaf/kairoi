@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_08_105146) do
+ActiveRecord::Schema.define(version: 2018_11_08_124938) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,15 +32,15 @@ ActiveRecord::Schema.define(version: 2018_11_08_105146) do
   end
 
   create_table "records", force: :cascade do |t|
-    t.datetime "start"
-    t.datetime "end"
+    t.datetime "start_date"
+    t.datetime "end_date"
     t.bigint "user_id"
     t.bigint "project_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "comment"
     t.index ["project_id"], name: "index_records_on_project_id"
-    t.index ["user_id", "project_id", "start"], name: "index_records_on_user_id_and_project_id_and_start", order: { start: :desc }
+    t.index ["user_id", "project_id", "start_date"], name: "index_records_on_user_id_and_project_id_and_start_date", order: { start_date: :desc }
     t.index ["user_id"], name: "index_records_on_user_id"
   end
 
