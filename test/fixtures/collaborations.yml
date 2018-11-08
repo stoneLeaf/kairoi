@@ -1,11 +1,21 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  type: 1
-  user: one
-  project: one
+holden_leads_galileo:
+  type: 0
+  user: holden
+  project: galileo
 
-two:
-  type: 1
-  user: two
-  project: two
+holden_member_of_figaro:
+  type: 2
+  user: holden
+  project: figaro
+
+miller_leads_figaro:
+  type: 0
+  user: miller
+  project: figaro
+
+miller_member_of_galileo:
+  type: 2
+  user: miller
+  project: galileo
