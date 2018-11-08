@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  start: 2018-11-08 11:28:11
+  end: 2018-11-08 11:28:11
+  user: one
+  project: one
+
+two:
+  start: 2018-11-08 11:28:11
+  end: 2018-11-08 11:28:11
+  user: two
+  project: two
