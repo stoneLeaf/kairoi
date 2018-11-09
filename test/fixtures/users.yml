@@ -4,12 +4,12 @@ holden:
   #first_name: James
   #last_name: Holden
   email: jholden@tycho.belt
-  password: naomi4ever
+  #password: naomi4ever
   encrypted_password: <%= Devise::Encryptor.digest(User, "naomi4ever") %>
 
 miller:
   #first_name: Josephus
   #last_name: Miller
   email: jmiller@starhelix.corp
-  password: julie4ever
+  #password: julie4ever
   encrypted_password: <%= Devise::Encryptor.digest(User, "julie4ever") %>

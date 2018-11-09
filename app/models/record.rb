@@ -4,7 +4,7 @@ class Record < ApplicationRecord
 
   validates :user_id, presence: true
   validates :project_id, presence: true
-  validates :start, presence: true
+  validates :start_date, presence: true
   validate :end_after_start
 
   def end_after_start
