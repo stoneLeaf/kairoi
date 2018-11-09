@@ -8,10 +8,19 @@ class RecordTest < ActiveSupport::TestCase
     @record = Record.new(user: @user, project: @project, start_date: Time.now)
   end
 
-  test "basic presence validation" do
-    assert_not @record.update_attributes(user: nil)
-    assert_not @record.update_attributes(project: nil)
-    assert_not @record.update_attributes(start_date: nil)
+  test "should have a user" do
+    @record.user = nil
+    assert_not @record.valid?
+  end
+
+  test "should have a project" do
+    @record.project = nil
+    assert_not @record.valid?
+  end
+
+  test "should have a start_date" do
+    @record.start_date = nil
+    assert_not @record.valid?
   end
 
   test "end_date should be after start_date" do

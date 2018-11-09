@@ -6,4 +6,5 @@ class Collaboration < ApplicationRecord
 
   validates :user_id, presence: true
   validates :project_id, presence: true
+  validates :nature, presence: true
 end
