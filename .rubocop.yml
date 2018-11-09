@@ -1,2 +1,5 @@
+
+# Disabled. I prefer single quotes in requires and routes, but double in other places.
 Style/StringLiterals:
+  Enabled: false
   EnforcedStyle: double_quotes
