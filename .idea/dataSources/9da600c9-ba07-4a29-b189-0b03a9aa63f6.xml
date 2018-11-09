@@ -12,7 +12,7 @@
       <Visible>1</Visible>
     </database>
     <database id="3" parent="1" name="kairoi_test">
-      <ObjectId>18197</ObjectId>
+      <ObjectId>18290</ObjectId>
       <Owner>stoneleaf</Owner>
     </database>
     <database id="4" parent="1" name="logan_development">
@@ -106,8 +106,8 @@
       <ObjectId>2200</ObjectId>
       <Comment>standard public schema</Comment>
       <Owner>postgres</Owner>
-      <IntrospectionTimestamp>2018-11-08.23:47:37.491</IntrospectionTimestamp>
-      <IntrospectionStateNumber>17661</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2018-11-09.10:21:56.158</IntrospectionTimestamp>
+      <IntrospectionStateNumber>18146</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -236,10 +236,10 @@
       <TypeId>20</TypeId>
       <SequenceName>collaborations_id_seq</SequenceName>
     </column>
-    <column id="44" parent="32" name="type">
+    <column id="44" parent="32" name="nature">
       <Position>2</Position>
       <DataType>integer|0s</DataType>
-      <StateNumber>17656</StateNumber>
+      <StateNumber>18146</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <column id="45" parent="32" name="user_id">

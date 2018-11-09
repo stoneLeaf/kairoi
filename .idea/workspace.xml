@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d879a58-35f2-4244-802b-48f367617d15" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/db/migrate/20181109092051_rename_type_column_of_collaborations.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9da600c9-ba07-4a29-b189-0b03a9aa63f6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9da600c9-ba07-4a29-b189-0b03a9aa63f6.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9da600c9-ba07-4a29-b189-0b03a9aa63f6/storage_v2/_src_/database/kairoi_development.FQVO0g/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9da600c9-ba07-4a29-b189-0b03a9aa63f6/storage_v2/_src_/database/kairoi_development.FQVO0g/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/collaboration.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/collaboration.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/fixtures/collaborations.yml" beforeDir="false" afterPath="$PROJECT_DIR$/test/fixtures/collaborations.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/models/collaboration_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/models/collaboration_test.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/models/record_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/models/record_test.rb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
@@ -19,7 +26,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/kairoi@Development__kairoi.rcov" NAME="Development: kairoi Coverage Results" MODIFIED="1541717532198" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="kairoi" />
-    <SUITE FILE_PATH="coverage/kairoi@test__kairoi.rcov" NAME="test: kairoi Coverage Results" MODIFIED="1541754400402" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="kairoi" />
+    <SUITE FILE_PATH="coverage/kairoi@test__kairoi.rcov" NAME="test: kairoi Coverage Results" MODIFIED="1541755386003" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="kairoi" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -36,6 +43,51 @@
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="Rails kairoi: development" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Rails kairoi: development" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Rails kairoi: development" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="kairoi_development: database" type="6d9b600a:PostgresImplModel$Database" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Rails kairoi: development" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="kairoi_development: database" type="6d9b600a:PostgresImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Rails kairoi: development" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="kairoi_development: database" type="6d9b600a:PostgresImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="a16502c0:PostgresImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Rails kairoi: development" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="kairoi_development: database" type="6d9b600a:PostgresImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="a16502c0:PostgresImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Rails kairoi: development" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="kairoi_development: database" type="6d9b600a:PostgresImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="a16502c0:PostgresImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="collaborations: table" type="a93d6ac6:PostgresImplModel$LocalTable" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
@@ -64,10 +116,10 @@
           <entry key="RailsDependency/User" value="1" />
           <entry key="enc" value="1" />
           <entry key="md" value="1" />
-          <entry key="rb" value="26" />
+          <entry key="rb" value="34" />
           <entry key="records" value="1" />
           <entry key="ru" value="1" />
-          <entry key="yml" value="16" />
+          <entry key="yml" value="17" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -75,21 +127,21 @@
           <entry key="Database Element" value="1" />
           <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Ruby" value="28" />
+          <entry key="Ruby" value="36" />
           <entry key="UML" value="1" />
-          <entry key="YAML" value="16" />
+          <entry key="YAML" value="17" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="rb" value="1188" />
-          <entry key="yml" value="199" />
+          <entry key="rb" value="1504" />
+          <entry key="yml" value="204" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Ruby" value="1188" />
-          <entry key="YAML" value="199" />
+          <entry key="Ruby" value="1504" />
+          <entry key="YAML" value="204" />
         </counts>
       </usages-collector>
     </session>
@@ -99,17 +151,53 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/record.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+            <state>
+              <caret column="6" selection-start-column="6" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/models/record_test.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/collaboration.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/migrate/20181109092051_rename_type_column_of_collaborations.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="49" selection-start-line="2" selection-start-column="49" selection-end-line="2" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/models/collaboration_test.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test/models/record_test.rb">
+        <entry file="file://$PROJECT_DIR$/test/fixtures/collaborations.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="79" selection-start-line="18" selection-start-column="79" selection-end-line="18" selection-end-column="79" />
+            <state relative-caret-position="75">
+              <caret line="5" column="18" lean-forward="true" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -139,8 +227,11 @@
         <option value="$PROJECT_DIR$/.rubocop.yml" />
         <option value="$PROJECT_DIR$/app/models/project.rb" />
         <option value="$PROJECT_DIR$/test/models/project_test.rb" />
-        <option value="$PROJECT_DIR$/app/models/collaboration.rb" />
         <option value="$PROJECT_DIR$/test/models/record_test.rb" />
+        <option value="$PROJECT_DIR$/test/models/collaboration_test.rb" />
+        <option value="$PROJECT_DIR$/app/models/collaboration.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20181109092051_rename_type_column_of_collaborations.rb" />
+        <option value="$PROJECT_DIR$/test/fixtures/collaborations.yml" />
       </list>
     </option>
   </component>
@@ -201,6 +292,12 @@
               <item name="kairoi" type="52f3b0f7:RailsProjectNode" />
               <item name="kairoi" type="ca5d24b0:RailsModuleNode" />
               <item name="Models" type="4bd37eb5:ModelsFolderNode" />
+            </path>
+            <path>
+              <item name="kairoi" type="52f3b0f7:RailsProjectNode" />
+              <item name="kairoi" type="ca5d24b0:RailsModuleNode" />
+              <item name="Models" type="4bd37eb5:ModelsFolderNode" />
+              <item name="Migrations" type="5e88d8ef:MigrationsFolder" />
             </path>
             <path>
               <item name="kairoi" type="52f3b0f7:RailsProjectNode" />
@@ -384,26 +481,11 @@
       <workItem from="1541713983247" duration="3308000" />
       <workItem from="1541717331461" duration="652000" />
       <workItem from="1541749312298" duration="240000" />
-      <workItem from="1541749561685" duration="4850000" />
+      <workItem from="1541749561685" duration="5855000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="test__kairoi - 2018.11.09 at 09h 52m 49s.xml">
-      <configuration name="test: kairoi" configurationId="RakeRunConfigurationType" />
-    </history-entry>
-    <history-entry file="test__kairoi - 2018.11.09 at 10h 00m 07s.xml">
-      <configuration name="test: kairoi" configurationId="RakeRunConfigurationType" />
-    </history-entry>
-    <history-entry file="test__kairoi - 2018.11.09 at 10h 03m 07s.xml">
-      <configuration name="test: kairoi" configurationId="RakeRunConfigurationType" />
-    </history-entry>
-    <history-entry file="test__kairoi - 2018.11.09 at 10h 04m 50s.xml">
-      <configuration name="test: kairoi" configurationId="RakeRunConfigurationType" />
-    </history-entry>
-    <history-entry file="test__kairoi - 2018.11.09 at 10h 05m 02s.xml">
-      <configuration name="test: kairoi" configurationId="RakeRunConfigurationType" />
-    </history-entry>
     <history-entry file="test__kairoi - 2018.11.09 at 10h 05m 19s.xml">
       <configuration name="test: kairoi" configurationId="RakeRunConfigurationType" />
     </history-entry>
@@ -419,9 +501,24 @@
     <history-entry file="test__kairoi - 2018.11.09 at 10h 06m 41s.xml">
       <configuration name="test: kairoi" configurationId="RakeRunConfigurationType" />
     </history-entry>
+    <history-entry file="test__kairoi - 2018.11.09 at 10h 06m 54s.xml">
+      <configuration name="test: kairoi" configurationId="RakeRunConfigurationType" />
+    </history-entry>
+    <history-entry file="test__kairoi - 2018.11.09 at 10h 16m 24s.xml">
+      <configuration name="test: kairoi" configurationId="RakeRunConfigurationType" />
+    </history-entry>
+    <history-entry file="test__kairoi - 2018.11.09 at 10h 17m 09s.xml">
+      <configuration name="test: kairoi" configurationId="RakeRunConfigurationType" />
+    </history-entry>
+    <history-entry file="test__kairoi - 2018.11.09 at 10h 18m 37s.xml">
+      <configuration name="test: kairoi" configurationId="RakeRunConfigurationType" />
+    </history-entry>
+    <history-entry file="test__kairoi - 2018.11.09 at 10h 23m 11s.xml">
+      <configuration name="test: kairoi" configurationId="RakeRunConfigurationType" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13234000" />
+    <option name="totallyTimeSpent" value="14239000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="25" width="1922" height="1056" extended-state="6" />
@@ -537,13 +634,6 @@
     <entry file="file://$PROJECT_DIR$/config.ru">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/schema.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-75">
-          <caret line="19" column="22" lean-forward="true" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="uml://RailsDependency/User">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
@@ -640,24 +730,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/fixtures/collaborations.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/models/project_test.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/collaboration.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="76" selection-start-line="4" selection-start-column="76" selection-end-line="4" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/models/collaboration_test.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
@@ -666,15 +739,57 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/record.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        <state>
+          <caret column="6" selection-start-column="6" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/models/record_test.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="79" selection-start-line="18" selection-start-column="79" selection-end-line="18" selection-end-column="79" />
+        <state relative-caret-position="165">
+          <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/models/collaboration_test.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/collaboration.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20181108124938_rename_records_start_and_end_columns.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/schema.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="19" column="22" lean-forward="true" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20181109092051_rename_type_column_of_collaborations.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="49" selection-start-line="2" selection-start-column="49" selection-end-line="2" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/fixtures/collaborations.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="18" lean-forward="true" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
         </state>
       </provider>
     </entry>

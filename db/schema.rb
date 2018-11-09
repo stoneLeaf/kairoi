@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_08_124938) do
+ActiveRecord::Schema.define(version: 2018_11_09_092051) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "collaborations", force: :cascade do |t|
-    t.integer "type"
+    t.integer "nature"
     t.bigint "user_id"
     t.bigint "project_id"
     t.datetime "created_at", null: false
