@@ -1,24 +1,49 @@
+# frozen_string_literal: true
+
+# Controller for Projects
 class ProjectsController < ApplicationController
+  prepend_before_action :set_project, except: %i[index new create]
   before_action :authenticate_user!
+  before_action :members_only, only: :show
+  before_action :managers_only, only: %i[edit update]
+  before_action :leads_only, only: :destroy
 
-  def new
+  rescue_from ActiveRecord::RecordNotFound, with: :handle_project_not_found
+
+  def index; end
+
+  def show; end
+
+  def new; end
+
+  def create; end
+
+  def edit; end
+
+  def update; end
+
+  def destroy; end
+
+  private
+
+  def members_only
+    raise Exceptions::ActionDeniedError unless @project.member_rights?(current_user)
   end
 
-  def create
+  def managers_only
+    raise Exceptions::ActionDeniedError unless @project.manager_rights?(current_user)
   end
 
-  def destroy
+  def leads_only
+    raise Exceptions::ActionDeniedError unless @project.lead_rights?(current_user)
   end
 
-  def show
+  def handle_project_not_found
+    flash[:danger] = "Project not found."
+    redirect_to projects_url and return
   end
 
-  def edit
-  end
-
-  def update
-  end
-
-  def index
+  def set_project
+    @project = Project.find(params[:id])
   end
 end

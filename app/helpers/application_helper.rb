@@ -17,5 +17,4 @@ module ApplicationHelper
     else type
     end
   end
-
 end

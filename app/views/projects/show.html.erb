@@ -1,2 +1,11 @@
-<h1>Projects#show</h1>
-<p>Find me in app/views/projects/show.html.erb</p>
+<h1>Project <%= @project.name %></h1>
+<p>Team members:</p>
+<% if @project.collaborations.any? %>
+    <ul>
+  <% @project.collaborations.each do |collaboration| %>
+    <li><%= collaboration.nature %> <a href="<%= "#" %>"><%= collaboration.user.email %></a></li>
+  <% end %>
+    </ul>
+<% else %>
+  none
+<% end %>

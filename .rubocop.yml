@@ -3,3 +3,6 @@
 Style/StringLiterals:
   Enabled: false
   EnforcedStyle: double_quotes
+
+Style/AndOr:
+  EnforcedStyle: conditionals

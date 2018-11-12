@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# Record model
 class Record < ApplicationRecord
   belongs_to :user
   belongs_to :project

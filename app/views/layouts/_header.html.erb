@@ -15,8 +15,8 @@
             Projects
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <% if current_user.projects.any? %>
-              <% current_user.projects.each do |project| %>
+            <% if @projects.any? %>
+              <% @projects.each do |project| %>
                 <a class="dropdown-item" href="<%= project_path(project.id) %>"><%= project.name %></a>
               <% end %>
             <% else %>
