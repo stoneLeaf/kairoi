@@ -22,4 +22,6 @@ Rails.application.routes.draw do
   get '/tos' => 'pages#tos'
   get '/contact' => 'pages#contact'
 
+  resources :projects
+
 end
