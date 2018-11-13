@@ -1,39 +1,26 @@
 require 'test_helper'
 
 class ProjectsControllerTest < ActionDispatch::IntegrationTest
-  test "should get new" do
-    get projects_new_url
-    assert_response :success
+  include Devise::Test::IntegrationHelpers
+
+  def setup
+    @first_user = users(:holden)
+    @second_user = users(:miller)
+    @first_user_project = projects(:galileo)
+    @second_user_project = projects(:figaro)
   end
 
-  test "should get create" do
-    get projects_create_url
-    assert_response :success
+  test "only leads can delete their projects" do
+    # Non logged in
+    delete project_url(@first_user_project)
+    assert Project.exists?(@first_user_project.id)
+    # Not a lead
+    sign_in @second_user
+    delete project_url(@first_user_project)
+    assert Project.exists?(@first_user_project.id)
+    # As lead
+    sign_in @first_user
+    delete project_url(@first_user_project)
+    assert_not Project.exists?(@first_user_project.id)
   end
-
-  test "should get destroy" do
-    get projects_destroy_url
-    assert_response :success
-  end
-
-  test "should get show" do
-    get projects_show_url
-    assert_response :success
-  end
-
-  test "should get edit" do
-    get projects_edit_url
-    assert_response :success
-  end
-
-  test "should get update" do
-    get projects_update_url
-    assert_response :success
-  end
-
-  test "should get index" do
-    get projects_index_url
-    assert_response :success
-  end
-
 end

@@ -6,6 +6,7 @@ holden:
   email: jholden@tycho.belt
   #password: naomi4ever
   encrypted_password: <%= Devise::Encryptor.digest(User, "naomi4ever") %>
+  confirmed_at: <%= Time.now %>
 
 miller:
   #first_name: Josephus
@@ -13,3 +14,4 @@ miller:
   email: jmiller@starhelix.corp
   #password: julie4ever
   encrypted_password: <%= Devise::Encryptor.digest(User, "julie4ever") %>
+  confirmed_at: <%= Time.now %>
