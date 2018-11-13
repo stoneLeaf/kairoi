@@ -11,9 +11,28 @@ class ProjectsController < ApplicationController
 
   def index; end
 
-  def new; end
+  def new
+    @project = Project.new
+  end
 
-  def create; end
+  def create
+    @project = current_user.projects.build(project_params)
+
+    # Validation is done in controller because it depends on current_user
+    # TODO: ugly and probably a better way to do it
+    # if current_user.projects.exists?(name: project_params[:name])
+    #  @project.errors.add(:name, "you already have a project with the same name")
+    # end
+
+    if @project.save
+      current_user.collaborations.create(project: @project,
+                                         nature: Collaboration.natures[:lead])
+      flash[:success] = "Project created!"
+      redirect_to project_url(@project)
+    else
+      render 'new'
+    end
+  end
 
   def show; end
 
@@ -44,5 +63,13 @@ class ProjectsController < ApplicationController
 
   def set_project
     @project = Project.find(params[:id])
+  end
+
+  def project_params
+    params.require(:project).permit(:name)
+  end
+
+  def unique_name_for_user
+
   end
 end

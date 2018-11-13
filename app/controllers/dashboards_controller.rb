@@ -1,9 +1,7 @@
 # frozen_string_literal: true
 
+# Dashboard controller
 class DashboardsController < ApplicationController
-  before_action :authenticate_user!
 
-  def show
-    @projects = current_user.projects
-  end
+  def show; end
 end

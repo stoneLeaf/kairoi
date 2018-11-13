@@ -12,4 +12,6 @@ class Collaboration < ApplicationRecord
   validates :user, presence: true, uniqueness: { scope: :project }
   validates :project, presence: true
   validates :nature, presence: true
+
+  # TODO: add a custom title field
 end
