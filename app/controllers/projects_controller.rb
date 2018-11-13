@@ -2,8 +2,7 @@
 
 # Controller for Projects
 class ProjectsController < ApplicationController
-  prepend_before_action :set_project, except: %i[index new create]
-  before_action :authenticate_user!
+  before_action :set_project, except: %i[index new create]
   before_action :members_only, only: :show
   before_action :managers_only, only: %i[edit update]
   before_action :leads_only, only: :destroy
@@ -12,11 +11,11 @@ class ProjectsController < ApplicationController
 
   def index; end
 
-  def show; end
-
   def new; end
 
   def create; end
+
+  def show; end
 
   def edit; end
 

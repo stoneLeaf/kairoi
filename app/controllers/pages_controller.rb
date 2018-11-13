@@ -1,18 +1,16 @@
 # frozen_string_literal: true
 
+# Static pages controller
 class PagesController < ApplicationController
-  def home
-  end
+  skip_before_action :authenticate_user!
 
-  def about
-  end
+  def home; end
 
-  def features
-  end
+  def about; end
 
-  def tos
-  end
+  def features; end
 
-  def contact
-  end
+  def tos; end
+
+  def contact; end
 end
