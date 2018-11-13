@@ -4,7 +4,7 @@
 #
 # @attr name [String] the project's name (required)
 class Project < ApplicationRecord
-  has_many :collaborations
+  has_many :collaborations, dependent: :destroy
   has_many :users, through: :collaborations
   has_many :records
 

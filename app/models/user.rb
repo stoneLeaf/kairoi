@@ -9,6 +9,6 @@ class User < ApplicationRecord
          :confirmable, :lockable
 
   has_many :records
-  has_many :collaborations
+  has_many :collaborations, dependent: :destroy
   has_many :projects, through: :collaborations
 end

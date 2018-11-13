@@ -40,7 +40,11 @@ class ProjectsController < ApplicationController
 
   def update; end
 
-  def destroy; end
+  def destroy
+    @project.destroy
+    flash[:success] = "Project deleted."
+    redirect_to projects_url
+  end
 
   private
 
