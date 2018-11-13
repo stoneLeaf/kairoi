@@ -11,15 +11,15 @@ class Project < ApplicationRecord
   validates :name, presence: true, length: { maximum: 160 }
 
   def members
-    users_with_nature Collaboration.natures[:member]
+    users.merge(Collaboration.member)
   end
 
   def managers
-    users_with_nature Collaboration.natures[:manager]
+    users.merge(Collaboration.manager)
   end
 
   def leads
-    users_with_nature Collaboration.natures[:lead]
+    users.merge(Collaboration.lead)
   end
 
   def member_rights?(user)
@@ -32,12 +32,5 @@ class Project < ApplicationRecord
 
   def lead_rights?(user)
     leads.exists? user.id
-  end
-
-  private
-
-  def users_with_nature(nature)
-    # TODO: find a way not to hard code the column name
-    users.where("collaborations.nature = ?", nature)
   end
 end
