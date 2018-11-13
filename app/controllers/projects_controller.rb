@@ -38,7 +38,14 @@ class ProjectsController < ApplicationController
 
   def edit; end
 
-  def update; end
+  def update
+    if @project.update_attributes(project_params)
+      flash[:success] = "Project updated!"
+      redirect_to project_url(@project)
+    else
+      render 'edit'
+    end
+  end
 
   def destroy
     @project.destroy
@@ -71,9 +78,5 @@ class ProjectsController < ApplicationController
 
   def project_params
     params.require(:project).permit(:name)
-  end
-
-  def unique_name_for_user
-
   end
 end

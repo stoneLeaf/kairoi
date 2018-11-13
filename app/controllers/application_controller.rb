@@ -4,6 +4,7 @@
 class ApplicationController < ActionController::Base
   before_action :authenticate_user!
   before_action :set_layout_instance_variables
+
   rescue_from Exceptions::ActionDeniedError, with: :handle_action_denied
 
   private
