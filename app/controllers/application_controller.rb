@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
   private
 
   def set_layout_instance_variables
-    @projects = current_user.projects if user_signed_in?
+    @projects = current_user.projects.reject(&:new_record?) if user_signed_in?
   end
 
   def handle_action_denied

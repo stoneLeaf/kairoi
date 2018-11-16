@@ -8,7 +8,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable,
          :confirmable, :lockable
 
-  has_many :records
+  has_many :projects, as: :owner
   has_many :collaborations, dependent: :destroy
-  has_many :projects, through: :collaborations
+  has_many :indirect_projects, through: :collaborations, source: :projects
+  has_many :records, dependent: :destroy
 end

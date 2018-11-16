@@ -7,9 +7,10 @@ class Project < ApplicationRecord
   has_many :collaborations, dependent: :destroy
   has_many :users, through: :collaborations
   has_many :records, dependent: :destroy
-  belongs_to :owner, class_name: 'User'
+  belongs_to :owner, polymorphic: true
 
-  validates :name, presence: true, length: { maximum: 160 }
+  validates :name, presence: true, length: { minimum: 2, maximum: 160 }, uniqueness: { scope: :owner}
+  validates :owner, presence: true
 
   def members
     users.merge(Collaboration.member)
@@ -24,14 +25,14 @@ class Project < ApplicationRecord
   end
 
   def member_rights?(user)
-    users.exists? user.id
+    user == owner || users.exists?(user.id)
   end
 
   def manager_rights?(user)
-    managers.or(leads).exists? user.id
+    user == owner || managers.or(leads).exists?(user.id)
   end
 
   def lead_rights?(user)
-    leads.exists? user.id
+    user == owner || leads.exists?(user.id)
   end
 end
