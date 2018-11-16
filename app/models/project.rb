@@ -9,8 +9,8 @@ class Project < ApplicationRecord
   has_many :records, dependent: :destroy
   belongs_to :owner, polymorphic: true
 
-  validates :name, presence: true, length: { minimum: 2, maximum: 160 }, uniqueness: { scope: :owner}
-  validates :owner, presence: true
+  validates :name, presence: true, length: { maximum: 160 },
+                   uniqueness: { scope: :owner }
 
   def members
     users.merge(Collaboration.member)

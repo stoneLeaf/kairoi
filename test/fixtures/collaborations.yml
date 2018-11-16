@@ -5,8 +5,8 @@ holden_leads_galileo:
   user: holden
   project: galileo
 
-holden_member_of_figaro:
-  nature: 2
+holden_manager_of_figaro:
+  nature: 1
   user: holden
   project: figaro
 

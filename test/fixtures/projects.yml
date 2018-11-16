@@ -2,6 +2,8 @@
 
 galileo:
   name: Galileo
+  owner: holden (User)
 
 figaro:
   name: Figaro
+  owner: miller (User)
