@@ -7,6 +7,7 @@ class Project < ApplicationRecord
   has_many :collaborations, dependent: :destroy
   has_many :users, through: :collaborations
   has_many :records, dependent: :destroy
+  belongs_to :owner, class_name: 'User'
 
   validates :name, presence: true, length: { maximum: 160 }
 
