@@ -10,12 +10,12 @@ class RecordTest < ActiveSupport::TestCase
     @record = Record.new(user: @user, project: @project, start_date: Time.now)
   end
 
-  test "should have a user" do
+  test "user is not optional" do
     @record.user = nil
     assert_not @record.valid?
   end
 
-  test "should have a project" do
+  test "project is not optional" do
     @record.project = nil
     assert_not @record.valid?
   end

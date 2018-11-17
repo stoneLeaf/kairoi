@@ -15,3 +15,19 @@ miller:
   #password: julie4ever
   encrypted_password: <%= Devise::Encryptor.digest(User, "julie4ever") %>
   confirmed_at: <%= Time.now %>
+
+amos:
+  #first_name: Amos
+  #last_name: Burton
+  email: aburton@tycho.belt
+  #password: gun4ever
+  encrypted_password: <%= Devise::Encryptor.digest(User, "gun4ever") %>
+  confirmed_at: <%= Time.now %>
+
+naomi:
+  #first_name: Naomi
+  #last_name: Nagata
+  email: nnagata@tycho.belt
+  #password: james4ever
+  encrypted_password: <%= Devise::Encryptor.digest(User, "james4ever") %>
+  confirmed_at: <%= Time.now %>

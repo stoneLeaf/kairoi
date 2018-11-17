@@ -9,9 +9,6 @@ class Collaboration < ApplicationRecord
 
   enum nature: { lead: 0, manager: 1, member: 2 } # could use a separate model
 
-  validates :user, presence: true, uniqueness: { scope: :project }
-  validates :project, presence: true
+  validates :user, uniqueness: { scope: :project }
   validates :nature, presence: true
-
-  # TODO: add a custom title field
 end

@@ -1,19 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-holden_leads_galileo:
+
+naomi_leads_galileo:
   nature: 0
-  user: holden
+  user: naomi
   project: galileo
 
-holden_manager_of_figaro:
+amos_manager_of_figaro:
   nature: 1
-  user: holden
-  project: figaro
-
-miller_leads_figaro:
-  nature: 0
-  user: miller
-  project: figaro
+  user: amos
+  project: galileo
 
 miller_member_of_galileo:
   nature: 2

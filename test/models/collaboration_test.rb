@@ -5,17 +5,23 @@ require 'test_helper'
 class CollaborationTest < ActiveSupport::TestCase
 
   def setup
-    @user = users(:holden)
     @project = projects(:galileo)
-    @collaboration = collaborations(:holden_leads_galileo)
+    @user = users(:naomi)
+    @collaboration = collaborations(:naomi_leads_galileo)
   end
 
-  test "should have a user" do
+  test "user is not optional" do
     @collaboration.user = nil
     assert_not @collaboration.valid?
   end
 
-  test "should have a project" do
+  test "user unique in project scope" do
+    new_collab = @project.collaborations.build(user: @user,
+                                               nature: Collaboration.natures[:manager])
+    assert_not new_collab.valid?
+  end
+
+  test "project is not optional" do
     @collaboration.project = nil
     assert_not @collaboration.valid?
   end

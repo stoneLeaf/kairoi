@@ -5,7 +5,6 @@ require 'test_helper'
 class ProjectTest < ActiveSupport::TestCase
 
   def setup
-    @member_of_galileo = users(:miller)
     @project = projects(:galileo)
   end
 
@@ -35,6 +34,14 @@ class ProjectTest < ActiveSupport::TestCase
   end
 
   test "member has member rights" do
-    assert @project.member_rights?(@member_of_galileo)
+    assert @project.member_rights?(@project.members.first)
+  end
+
+  test "manager has manager rights" do
+    assert @project.manager_rights?(@project.managers.first)
+  end
+
+  test "lead has lead rights" do
+    assert @project.lead_rights?(@project.leads.first)
   end
 end
