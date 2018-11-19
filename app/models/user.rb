@@ -12,4 +12,8 @@ class User < ApplicationRecord
   has_many :collaborations, dependent: :destroy
   has_many :indirect_projects, through: :collaborations, source: :projects
   has_many :records, dependent: :destroy
+
+  validates :username, presence: true, length: { minimum: 3, maximum: 15 },
+                       format: { with: /\A[\da-zA-Z][\w]{2,}\z/ },
+                       uniqueness: { case_sensitive: false }
 end
