@@ -16,6 +16,12 @@ class Project < ApplicationRecord
                    uniqueness: { scope: :owner,
                                  message: "path already used in namespace" }
 
+  # Override ActiveRecord::Base to_param
+  # TODO: Is there a way to make it called automatically by routes helpers?
+  def to_param
+    { user_id: owner.id.to_s, slug: slug }
+  end
+
   def members
     users.merge(Collaboration.member)
   end

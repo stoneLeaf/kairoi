@@ -20,7 +20,7 @@ class ProjectsController < ApplicationController
 
     if @project.save
       flash[:success] = "Project created!"
-      redirect_to project_url(@project)
+      redirect_to project_url(@project.to_param)
     else
       render 'new'
     end
@@ -33,7 +33,7 @@ class ProjectsController < ApplicationController
   def update
     if @project.update_attributes(project_params)
       flash[:success] = "Project updated!"
-      redirect_to project_url(@project)
+      redirect_to project_url(@project.to_param)
     else
       render 'edit'
     end
@@ -65,7 +65,8 @@ class ProjectsController < ApplicationController
   end
 
   def set_project
-    @project = Project.find(params[:id])
+    @project = Project.where(owner: params[:user_id], slug: params[:slug]).first
+    raise ActiveRecord::RecordNotFound if @project.nil?
   end
 
   def project_params

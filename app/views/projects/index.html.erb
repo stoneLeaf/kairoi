@@ -2,9 +2,9 @@
 <% if @projects.any? %>
   <ul>
   <% @projects.each do |project| %>
-    <li><a href="<%= project_path(project.id) %>"><%= project.name %></a>
-      (<%= link_to "Edit", edit_project_path(project) %>)
-      (<%= link_to "Delete", project, method: :delete, data: {confirm: "Are you sure?"} %>)</li>
+    <li><%= link_to project.name, project_path(project.to_param) %>
+      (<%= link_to "Edit", edit_project_path(project.to_param) %>)
+      (<%= link_to "Delete", project_path(project.to_param), method: :delete, data: {confirm: "Are you sure?"} %>)</li>
   <% end %>
   </ul>
 <% else %>
