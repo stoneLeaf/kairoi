@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_16_151744) do
+ActiveRecord::Schema.define(version: 2018_11_19_134816) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,7 +31,9 @@ ActiveRecord::Schema.define(version: 2018_11_16_151744) do
     t.datetime "updated_at", null: false
     t.string "owner_type"
     t.bigint "owner_id"
+    t.string "slug", null: false
     t.index ["owner_type", "owner_id"], name: "index_projects_on_owner_type_and_owner_id"
+    t.index ["slug"], name: "index_projects_on_slug", unique: true
   end
 
   create_table "records", force: :cascade do |t|

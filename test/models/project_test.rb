@@ -22,6 +22,17 @@ class ProjectTest < ActiveSupport::TestCase
     assert_not new_project.valid?
   end
 
+  test "slug should be 70 chars max" do
+    @project.name = "a" * 71
+    assert @project.valid?
+    assert @project.slug.length == 70
+  end
+
+  test "slug should be unique in owner's scope" do
+    new_project = @project.owner.projects.build(name: @project.name + "$")
+    assert_not new_project.valid?
+  end
+
   test "owner should not be optional" do
     @project.owner = nil
     assert_not @project.valid?

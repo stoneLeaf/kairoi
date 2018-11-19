@@ -2,8 +2,10 @@
 
 galileo:
   name: Galileo
+  slug: galileo
   owner: holden (User)
 
 figaro:
   name: Figaro
+  slug: figaro
   owner: miller (User)

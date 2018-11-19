@@ -11,6 +11,10 @@ class Project < ApplicationRecord
 
   validates :name, presence: true, length: { maximum: 160 },
                    uniqueness: { scope: :owner }
+  before_validation :generate_slug
+  validates :slug, presence: true, length: { maximum: 70 },
+                   uniqueness: { scope: :owner,
+                                 message: "path already used in namespace" }
 
   def members
     users.merge(Collaboration.member)
@@ -34,5 +38,11 @@ class Project < ApplicationRecord
 
   def lead_rights?(user)
     user == owner || leads.exists?(user.id)
+  end
+
+  private
+
+  def generate_slug
+    self.slug = to_slug(name)
   end
 end
