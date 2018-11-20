@@ -12,15 +12,15 @@ class ProjectsControllerTest < ActionDispatch::IntegrationTest
 
   test "only leads can delete their projects" do
     # Non logged in
-    delete project_url(@first_user_project)
+    delete project_url(@first_user_project.to_param)
     assert Project.exists?(@first_user_project.id)
     # Not a lead
     sign_in @second_user
-    delete project_url(@first_user_project)
+    delete project_url(@first_user_project.to_param)
     assert Project.exists?(@first_user_project.id)
     # As lead
     sign_in @first_user
-    delete project_url(@first_user_project)
+    delete project_url(@first_user_project.to_param)
     assert_not Project.exists?(@first_user_project.id)
   end
 end

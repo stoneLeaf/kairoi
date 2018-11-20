@@ -3,6 +3,7 @@
 holden:
   #first_name: James
   #last_name: Holden
+  username: jholden
   email: jholden@tycho.belt
   #password: naomi4ever
   encrypted_password: <%= Devise::Encryptor.digest(User, "naomi4ever") %>
@@ -11,6 +12,7 @@ holden:
 miller:
   #first_name: Josephus
   #last_name: Miller
+  username: jmiller
   email: jmiller@starhelix.corp
   #password: julie4ever
   encrypted_password: <%= Devise::Encryptor.digest(User, "julie4ever") %>
@@ -19,6 +21,7 @@ miller:
 amos:
   #first_name: Amos
   #last_name: Burton
+  username: aburton
   email: aburton@tycho.belt
   #password: gun4ever
   encrypted_password: <%= Devise::Encryptor.digest(User, "gun4ever") %>
@@ -27,6 +30,7 @@ amos:
 naomi:
   #first_name: Naomi
   #last_name: Nagata
+  username: nnagatagit status
   email: nnagata@tycho.belt
   #password: james4ever
   encrypted_password: <%= Devise::Encryptor.digest(User, "james4ever") %>
