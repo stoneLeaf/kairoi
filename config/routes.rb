@@ -2,8 +2,6 @@
 
 Rails.application.routes.draw do
 
-  devise_for :users
-
   authenticated :user do
     root to: "dashboards#show", as: :authenticated_root
   end
@@ -12,9 +10,11 @@ Rails.application.routes.draw do
     root to: "pages#home"
   end
 
+  devise_for :users, skip: [:sessions]
   devise_scope :user do
-    get '/login', to: 'devise/sessions#new'
-    get '/sign_up' => 'devise/registrations#new'
+    get '/login' => 'devise/sessions#new', as: :new_user_session
+    post '/login' => 'devise/sessions#create', as: :user_session
+    delete '/logout' => 'devise/sessions#destroy', as: :destroy_user_session
   end
 
   get '/features' => 'pages#features'
