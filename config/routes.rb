@@ -22,6 +22,6 @@ Rails.application.routes.draw do
   get '/tos' => 'pages#tos'
   get '/contact' => 'pages#contact'
 
-  resources :projects, param: 'user_id/:slug'
+  resources :projects, param: 'owner_name/:slug'
 
 end

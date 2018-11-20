@@ -65,7 +65,10 @@ class ProjectsController < ApplicationController
   end
 
   def set_project
-    @project = Project.where(owner: params[:user_id], slug: params[:slug]).first
+    @owner = User.find_by_username(params[:owner_name])
+    raise ActiveRecord::RecordNotFound if @owner.nil?
+
+    @project = Project.where(owner: @owner, slug: params[:slug]).first
     raise ActiveRecord::RecordNotFound if @project.nil?
   end
 
