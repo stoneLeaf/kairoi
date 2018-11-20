@@ -14,6 +14,14 @@ class User < ApplicationRecord
   has_many :records, dependent: :destroy
 
   validates :username, presence: true, length: { minimum: 3, maximum: 15 },
-                       format: { with: /\A(?!_)(?!.*?__)[\w]{3,}\z/ },
                        uniqueness: { case_sensitive: false }
+  validates_format_of :username,
+                      with: /\A\w+\z/,
+                      message: "must be alphanumeric and underscores only"
+  validates_format_of :username,
+                      with: /\A(?!_)/,
+                      message: "cannot start by an underscore"
+  validates_format_of :username,
+                      with: /\A(?!.*?__).+\z/,
+                      message: "cannot have consecutive underscores"
 end
