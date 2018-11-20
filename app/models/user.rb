@@ -14,6 +14,6 @@ class User < ApplicationRecord
   has_many :records, dependent: :destroy
 
   validates :username, presence: true, length: { minimum: 3, maximum: 15 },
-                       format: { with: /\A[\da-zA-Z][\w]{2,}\z/ },
+                       format: { with: /\A(?!_)(?!.*?__)[\w]{3,}\z/ },
                        uniqueness: { case_sensitive: false }
 end
