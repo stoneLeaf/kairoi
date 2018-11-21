@@ -8,7 +8,9 @@
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
         <% if current_user.recording? %>
-          <%= link_to "Stop ■", stop_record_path, class: "btn btn-danger" %>
+          <li class="nav-item">
+            <%= link_to "Stop ■", stop_record_path, class: "btn btn-danger" %>
+          </li>
         <% end %>
         <li class="nav-item<%= " active" if current_page?(root_path) %>">
           <%= link_to "Dashboard", root_path, class: "nav-link" %>
