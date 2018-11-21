@@ -22,6 +22,8 @@ Rails.application.routes.draw do
   get '/tos' => 'pages#tos'
   get '/contact' => 'pages#contact'
 
-  resources :projects, param: 'owner_name/:slug'
+  resources :projects, param: 'project_namespace/:project_slug'
+  resources :records, only: %i[create destroy]
+  get '/records/stop' => 'records#stop', as: :stop_record
 
 end

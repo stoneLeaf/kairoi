@@ -24,4 +24,12 @@ class User < ApplicationRecord
   validates_format_of :username,
                       with: /\A(?!.*?__).+\z/,
                       message: "cannot have consecutive underscores"
+
+  def recording?
+    records.where(end_date: nil).any?
+  end
+
+  def current_record
+    records.where(end_date: nil).first
+  end
 end

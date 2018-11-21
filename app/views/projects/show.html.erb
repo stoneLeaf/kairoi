@@ -1,5 +1,22 @@
 <h1>Project <%= @project.name %></h1>
-<p>Team members:</p>
+<% unless current_user.recording? %>
+  <%= form_for(@record) do |f| %>
+    <%= f.hidden_field :project_namespace, value: @project.owner.username  %>
+    <%= f.hidden_field :project_slug, value: @project.slug  %>
+    <%= f.submit "Create new record", class: "btn btn-danger" %>
+  <% end %>
+<% end %>
+<h2>Latest records:</h2>
+<% if @last_records.any? %>
+  <ul>
+    <% @last_records.each do |record| %>
+      <li><%= record.user.username %>: from <%= record.start_date %> to <%= record.end_date %></a></li>
+    <% end %>
+  </ul>
+<% else %>
+  none
+<% end %>
+<h2>Team members:</h2>
 <% if @project.collaborations.any? %>
     <ul>
   <% @project.collaborations.each do |collaboration| %>

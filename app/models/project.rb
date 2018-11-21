@@ -19,7 +19,7 @@ class Project < ApplicationRecord
   # Override ActiveRecord::Base to_param
   # TODO: Is there a way to make it called automatically by routes helpers?
   def to_param
-    { owner_name: owner.username, slug: slug }
+    { project_namespace: owner.username, project_slug: slug }
   end
 
   def members

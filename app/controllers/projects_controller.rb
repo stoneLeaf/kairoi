@@ -26,7 +26,10 @@ class ProjectsController < ApplicationController
     end
   end
 
-  def show; end
+  def show
+    @last_records = Record.where(project: @project).order("start_date DESC").limit(5)
+    @record = Record.new
+  end
 
   def edit; end
 
@@ -65,10 +68,10 @@ class ProjectsController < ApplicationController
   end
 
   def set_project
-    @owner = User.find_by_username(params[:owner_name])
+    @owner = User.find_by_username(params[:project_namespace])
     raise ActiveRecord::RecordNotFound if @owner.nil?
 
-    @project = Project.where(owner: @owner, slug: params[:slug]).first
+    @project = Project.where(owner: @owner, slug: params[:project_slug]).first
     raise ActiveRecord::RecordNotFound if @project.nil?
   end
 
