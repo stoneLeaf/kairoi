@@ -3,7 +3,7 @@
 Rails.application.routes.draw do
 
   authenticated :user do
-    root to: "dashboards#show", as: :authenticated_root
+    root to: "dashboards#index", as: :authenticated_root
   end
 
   unauthenticated do
